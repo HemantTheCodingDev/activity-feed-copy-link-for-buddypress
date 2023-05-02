@@ -1,0 +1,19 @@
+/* 
+activity-feed-styles.css 
+
+Add your own styles here to make theme updates easier.
+To override any styles from other stylesheets, simply copy them into here and edit away.
+
+*/
+
+.generic-button .copy_activity_link   {
+        margin-left: 2px !important;
+        color: #bdbcbc !important;
+        letter-spacing: -.24px !important;
+        line-height: 1 !important;
+        font-family: 'Work Sans' !important;
+        /*-webkit-font-smoothing: auto;*/
+    }
+.generic-button .copy_activity_link:hover,#activity-cmt .all-comments-btn:hover{
+      color: #ffd281 !important;  
+  }
