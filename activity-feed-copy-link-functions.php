@@ -3,7 +3,7 @@
  * BuddyPress Activity Feed Copy Link
  *
  * Plugin Name:       Activity Feed Copy Link For BuddyPress
- * Plugin URI:        #
+ * Plugin URI:        https://github.com/HemantTheCodingDev/activity-feed-copy-link-for-buddypress
  * Description:       This plugin adds a "Copy Link" button to each activity feed in BuddyPress.
  * Version:           1.0.0
  * Author:            Hemant Jha
