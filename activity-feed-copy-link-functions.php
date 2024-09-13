@@ -7,7 +7,7 @@
  * Description:       This plugin adds a "Copy Link" button to each activity feed in BuddyPress.
  * Version:           1.0.0
  * Author:            Hemant Jha
- * Author URI:        https://www.linkedin.com/in/hemant-jha-3920b3120
+ * Author URI:        https://hemantjha2.website3.me/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       buddypress-activity-feed-copy-link
