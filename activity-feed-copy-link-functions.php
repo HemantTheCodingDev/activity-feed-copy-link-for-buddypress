@@ -29,7 +29,7 @@ function enqueue_fontawesome() {
 
 /** Bp_activity_feed_copy_link_enqueue_scripts */
 function bp_activity_feed_copy_link_enqueue_scripts() {
-	wp_enqueue_style( 'bp-activity-feed-copy-link-css', BP_ACTIVITY_LINK_PREVIEW_URL . 'assets/css/bp-activity-feed-copy-link.css', array(), '1.0.0', 'all' );
+	wp_enqueue_style( 'bp-activity-feed-copy-link-css', BP_ACTIVITY_FEED_COPY_LINK_URL . 'assets/css/bp-activity-feed-copy-link.css', array(), '1.0.0', 'all' );
 }
 add_action( 'wp_enqueue_scripts', 'bp_activity_feed_copy_link_enqueue_scripts' );
 
