@@ -34,37 +34,35 @@ function bp_activity_feed_copy_link_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'bp_activity_feed_copy_link_enqueue_scripts' );
 
 // Add copy functionality to each activity feed
-function bp_share_activity_filter_new() { ?>
+function bp_share_activity_filter_new() {
+    $activity_link_copy = bp_get_activity_thread_permalink();
+    $nonce = wp_create_nonce('copy_link_nonce'); // Generate a nonce
+    ?>
     <div class="generic-button">
-		<?php $activity_link_copy = bp_get_activity_thread_permalink(); ?>
-		<i class="far fa-copy" style="cursor: pointer;" onClick='copyText(this)'><span style="position: absolute;left: -9999px;"><?php echo $activity_link_copy; ?></span><span class="copy_activity_link"> Copy Link</span></i>
-	</div>
-	<script>
-		function copyText(element) {
-			var range, selection, worked;
+        <!-- Copy Link Button -->
+        <a id="copy-link-button" class="button-copylink far fa-copy bp-primary-action" aria-expanded="false" href="<?php echo esc_url( add_query_arg( '_wpnonce', $nonce, $activity_link_copy ) ); ?>" role="button" onClick='copyText(event)'>
+            <span class="bp-screen-reader-text">Copy Link</span>
+            <span class="comment-count">Copy Link</span>
+        </a>
+    </div>
+    <script>
+        function copyText(event) {
+            event.preventDefault(); // Prevent the default action of the anchor tag
 
-			if (document.body.createTextRange) {
-				range = document.body.createTextRange();
-				range.moveToElementText(element);
-				range.select();
-			} else if (window.getSelection) {
-				selection = window.getSelection();
-				range = document.createRange();
-				range.selectNodeContents(element);
-				selection.removeAllRanges();
-				selection.addRange(range);
-			}
+            var copyText = "<?php echo esc_js($activity_link_copy); ?>"; // Ensure the URL is properly escaped for JavaScript
 
-			try {
-				document.execCommand('copy');
-				alert('Link copied');
-			}
-			catch (err) {
-				alert('unable to copy link');
-			}
-		}
-	</script>
-	<?php
+            // Create a temporary input to hold the text to copy
+            var tempInput = document.createElement("input");
+            tempInput.value = copyText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+
+            alert('Link copied');
+        }
+    </script>
+    <?php
 }
 add_action( 'bp_activity_entry_meta', 'bp_share_activity_filter_new' );
 
