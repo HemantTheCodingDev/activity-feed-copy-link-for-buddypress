@@ -10,10 +10,10 @@
  * Author URI:        https://hemantjha2.website3.me/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       buddypress-activity-feed-copy-link
+ * Text Domain:       activity-feed-copy-link-for-buddypress
  * Domain Path:       /languages
  *
- * @package           Buddypress-activity-feed-copy-link
+ * @package           Activity-feed-copy-link-for-buddypress
  * @link              #
  * @since             1.0.0
  */
@@ -48,7 +48,7 @@ function bp_share_activity_filter_new() { ?>
 				range.moveToElementText(element);
 				range.select();
 			} else if (window.getSelection) {
-				selection = window.getSelection();        
+				selection = window.getSelection();
 				range = document.createRange();
 				range.selectNodeContents(element);
 				selection.removeAllRanges();
