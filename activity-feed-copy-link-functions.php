@@ -22,9 +22,9 @@ define( 'BP_ACTIVITY_FEED_COPY_LINK_URL', plugin_dir_url( __FILE__ ) );
 define( 'BP_ACTIVITY_FEED_COPY_LINK_PATH', plugin_dir_path( __FILE__ ) );
 
 // Enqueue FontAwesome for the icon
-add_action('wp_enqueue_scripts', 'enqueue_fontawesome');
-function enqueue_fontawesome() {
-    wp_enqueue_style('fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+add_action('wp_enqueue_scripts', 'enqueue_fontawesome_local');
+function enqueue_fontawesome_local() {
+    wp_enqueue_style('fontawesome', BP_ACTIVITY_FEED_COPY_LINK_URL . 'assets/css/all.min.css', array(), '5.15.3');
 }
 
 /** Bp_activity_feed_copy_link_enqueue_scripts */
@@ -65,5 +65,4 @@ function bp_share_activity_filter_new() {
     <?php
 }
 add_action( 'bp_activity_entry_meta', 'bp_share_activity_filter_new' );
-
 ?>
