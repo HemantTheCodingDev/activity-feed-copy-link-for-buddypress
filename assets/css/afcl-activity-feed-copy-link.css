@@ -3,14 +3,13 @@ activity-feed-styles.css
 
 Add your own styles here to make theme updates easier.
 To override any styles from other stylesheets, simply copy them into here and edit away.
-
 */
 
 .far {
     cursor: pointer !important;
 }
 
-.generic-button .copy_activity_link {
+.generic-button .button-copylink {
     margin-left: 2px !important;
     color: #333 !important;
     letter-spacing: -.24px !important;
@@ -18,7 +17,8 @@ To override any styles from other stylesheets, simply copy them into here and ed
     /* font-family: 'Work Sans' !important; */
     /*-webkit-font-smoothing: auto;*/
 }
-.generic-button .copy_activity_link:hover,#activity-cmt .all-comments-btn:hover {
+
+.generic-button .button-copylink:hover,#activity-cmt .all-comments-btn:hover {
     color: #333 !important;
 }
 

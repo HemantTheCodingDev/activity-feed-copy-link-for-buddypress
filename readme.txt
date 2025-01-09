@@ -1,9 +1,9 @@
 === Activity Feed Copy Link For BuddyPress ===
-Contributors: Hemant Jha
+Contributors: hemantjha009
 Tags: buddypress, activity feed, copy link
 Requires at least: 4.0
-Tested up to: 6.6.2
-Stable tag: 1.0.0
+Tested up to: 6.7.1
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,11 +24,13 @@ Activity Feed Copy Link For BuddyPress adds a "Copy Link" button to each activit
 
 Yes, this plugin requires BuddyPress to be installed and activated on your WordPress site.
 
-== Screenshots ==
-
-1. The "Copy Link" button added to an activity feed in BuddyPress.
-
 == Changelog ==
+
+= 1.0.1 =
+* Improved security with nonce verification.
+* Moved inline JavaScript to an external file.
+* Localized script for translatable text.
+* Enhanced code readability and maintainability.
 
 = 1.0.0 =
 * Initial release.
