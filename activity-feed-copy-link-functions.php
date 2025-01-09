@@ -30,7 +30,11 @@ define( 'AFCL_ACTIVITY_FEED_COPY_LINK_PATH', plugin_dir_path( __FILE__ ) );
 add_action( 'wp_enqueue_scripts', 'afcl_activity_feed_copy_link_enqueue_assets' );
 function afcl_activity_feed_copy_link_enqueue_assets() {
     // Enqueue FontAwesome
+<<<<<<< HEAD
     wp_enqueue_style( 'fontawesome', AFCL_ACTIVITY_FEED_COPY_LINK_URL . 'assets/css/font-awesome.min.css', array(), '4.7.0' );
+=======
+    wp_enqueue_style( 'fontawesome', AFCL_ACTIVITY_FEED_COPY_LINK_URL . 'assets/css/all.min.css', array(), '5.15.3' );
+>>>>>>> 7f4824f22964dcab246dc702da38d0ae12d0f162
 
     // Enqueue Plugin CSS
     wp_enqueue_style( 'afcl-activity-feed-copy-link-css', AFCL_ACTIVITY_FEED_COPY_LINK_URL . 'assets/css/afcl-activity-feed-copy-link.css', array(), '1.0.0', 'all' );
@@ -60,8 +64,13 @@ function afcl_add_copy_link_button() {
 
     ?>
     <div class="generic-button">
+<<<<<<< HEAD
         <button class="button-copylink afcl-primary-action" data-link="<?php echo esc_url( $activity_link ); ?>" data-nonce="<?php echo esc_attr( $nonce ); ?>" aria-expanded="false" tabindex="0">
             <i class="fa fa-copy"></i><span class="afcl-screen-reader-text"><?php esc_html_e( 'Copy Link', 'activity-feed-copy-link-for-buddypress' ); ?></span>
+=======
+        <button class="button-copylink fas fa-copy afcl-primary-action" data-link="<?php echo esc_url( $activity_link ); ?>" data-nonce="<?php echo esc_attr( $nonce ); ?>" aria-expanded="false" tabindex="0">
+            <span class="afcl-screen-reader-text"><?php esc_html_e( 'Copy Link', 'activity-feed-copy-link-for-buddypress' ); ?></span>
+>>>>>>> 7f4824f22964dcab246dc702da38d0ae12d0f162
         </button>
     </div>
     <?php
